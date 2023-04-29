@@ -1,0 +1,23 @@
+
+html
+html(lang="en")
+  head
+    title My Photo Gallery
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+  body
+    header
+      h1 My Photo Gallery
+    main
+      each photo in photos
+        .photo
+          img(src=photo.thumbnailUrl, alt=photo.title)
+          p.photo-albumId= "Album ID: " + photo.albumId
+          p.photo-id= "ID: " + photo.id
+          p.photo-title= "Title: " + photo.title
+          p.photo-url= "URL: " + photo.url
+          p.photo-thumbnailUrl= "Thumbnail URL: " + photo.thumbnailUrl
+    footer
+      p Copyright © My Photo Gallery
+
+        
